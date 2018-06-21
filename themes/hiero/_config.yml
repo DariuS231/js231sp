@@ -14,7 +14,7 @@ rss: /atom.xml
 since: 2015
 
 # Set default keywords (Use a comma to separate)
-keywords: ""
+keywords: "SharePoint, Office365, Azure, JavaScript, Typescript, Powershell"
 
 # Put your favicon.ico into `hexo-site/themes/hiero/source/` directory.
 favicon: css/images/favicon.ico
@@ -123,7 +123,7 @@ gauges_analytics:
 baidu_analytics:
 tencent_analytics:
 busuanzi_analytics: false
-twitter:
+twitter: Darius231
 google_plus:
 fb_admins:
 fb_app_id:
@@ -143,15 +143,15 @@ cnzz_siteid: 1260716016
 # donation button
 donate:
     enable: false
-    message: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!'
-    wechatImage: https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/WeChanQR.png
-    alipayImage: https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/AliPayQR.jpg
+    message: ''
+    wechatImage: 
+    alipayImage: 
 
 # Automatic page load progress bar by PACE.js
 progressBar:
-  enable: true #switch
-  themeCSS: https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css    #PATH to PACE theme CSS, support relative / absolute path
+  enable: false #switch
+  themeCSS: https://cdn.rawgit.com/HubSpot/pace/4afddfb3/themes/orange/pace-theme-flash.css    #PATH to PACE theme CSS, support relative / absolute path
 
 # Ad
 ad:
-  google_adsense_ad_client_id: ca-pub-0123456789ABCDEF
+  google_adsense_ad_client_id: 
