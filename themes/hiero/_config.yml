@@ -149,7 +149,7 @@ donate:
 
 # Automatic page load progress bar by PACE.js
 progressBar:
-  enable: false #switch
+  enable: true #switch
   themeCSS: https://cdn.rawgit.com/HubSpot/pace/4afddfb3/themes/orange/pace-theme-flash.css    #PATH to PACE theme CSS, support relative / absolute path
 
 # Ad
