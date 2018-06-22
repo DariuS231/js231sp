@@ -1,0 +1,48 @@
+<% if (theme.share){ %>
+    <div class="post_share">
+        <div class="post_share_title">
+            <i class="fa fa-share" aria-hidden="true"></i> Share
+        </div>
+        <div class="widget widget_athemes_social_icons post_share_buttons">
+            <ul class="clearfix widget-social-icons post_share_buttons_list">   
+                <% if (theme.share.facebook){ %>
+                    <li>
+                        <a data-toggle="tooltip" data-placement="top" onclick="return JS231SP.CORE.Utils.Popitup('https://facebook.com/sharer/sharer.php?u=<%- url %>', 400, 800)" title="Share on Facebook" >
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                <% } %>
+                <% if (theme.share.twitter){ %>
+                    <li>
+                        <a data-toggle="tooltip" data-placement="top" onclick="return JS231SP.CORE.Utils.Popitup('https://twitter.com/intent/tweet/?text=<%- post.title %>&amp;url=<%- url %>&via=<%- theme.social['twitter'] %>', 400, 800)" title="Share on Twitter">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                <% } %>
+                <% if (theme.share.Google){ %>
+                    <li>
+                        <a data-toggle="tooltip" data-placement="top" onclick="return JS231SP.CORE.Utils.Popitup('https://plus.google.com/share?url=<%- url %>', 400, 800)" title="Share on Google-plus">
+                            <i class="fa fa-google-plus" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                <% } %>
+                <% if (theme.share.linkedin){ %>
+                    <li>
+                        <a data-toggle="tooltip" data-placement="top" onclick="return JS231SP.CORE.Utils.Popitup('https://www.linkedin.com/shareArticle?mini=true&amp;url=<%- url %>&amp;title=<%- post.title %>&amp;source=<%- url %>', 400, 800)" title="Share on LinkedIn">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+    
+                <% } %>
+                <% if (theme.share.email){ %>
+                    <li>
+                        <a data-toggle="tooltip" data-placement="top" href="mailto:?subject=Super%20fast%20and%20easy%20Social%20Media%20Sharing%20Buttons.%20No%20JavaScript.%20No%20tracking.&amp;body=<%- url %>" data-toggle="tooltip" data-placement="top" title="Share on Email">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                <% } %>
+    
+            </ul>
+        </div>
+    </div>
+<% } %>

@@ -1,5 +1,27 @@
 /*
 type your custom JavaScript here
-在本文件中键入您的自定义JS脚本
-升级主题文件时请注意保护本文件，防止意外覆盖。
+
 */
+
+var JS231SP = JS231SP || {};
+JS231SP.CORE = JS231SP.CORE || {};
+
+JS231SP.CORE.Utils = (function ($) {
+    "use strict";
+
+	var popitup = function (url, height, width) {
+        var newwindow=window.open(url,'name','height=' + height + ',width=' + width);
+        if (window.focus) {newwindow.focus()}
+        return false;
+    }
+
+	return {
+		Popitup: popitup
+	};
+
+})($);
+
+JS231SP.CORE.Init = (function ($) {
+    "use strict";
+    $('[data-toggle="tooltip"]').tooltip();
+})($);
