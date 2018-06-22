@@ -1,5 +1,40 @@
 /*
 type your custom css here
-在本文件键入您的自定义CSS
-升级主题文件时请注意保护本文件，防止意外覆盖。
+
 */
+/**   Post Share Buttons   **/
+.post_share{}
+
+.post_share_title{
+  text-align: right; color: #ff2828;
+}
+.post_share_buttons{
+  float:right;
+}
+.widget.post_share_buttons{
+  margin-bottom: 0;
+}
+.post_share_buttons.widget ul{
+  margin-bottom: 10px;
+}
+.post_share_buttons_list > li:last-child {
+  margin-right: 0;
+}
+.post_share_buttons_list > li > a {
+  cursor: pointer;
+}
+
+/**   Social widget   **/
+.widget_athemes_social_icons_pic_and_buttons{
+  width: 100%;
+}
+.widget_athemes_social_icons_pic_and_buttons > div{
+  padding: 5px;margin: 0;display: inline-block;vertical-align: top;
+}
+
+.widget_athemes_social_icons_description{
+  text-align: justify; padding: 0 10px; font-size: 14px;
+}
+.post_share_full_name{
+  color: #ff2828;
+}

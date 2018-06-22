@@ -40,9 +40,12 @@
       <% } else { %>
         <%- post.content %>
       <% } %>
+      <% if (!index){ %>
+        <%- partial('post/share',{index: index, post: post}) %>
+      <% } %>
     </div>
     <footer class="entry-meta entry-footer">
-      <%- partial('post/category') %>
+    <%- partial('post/category') %>
       <%- partial('post/tag') %>
       <% if (!index && theme.donate.enable){ %>
         <%- partial('donate') %>
@@ -68,6 +71,5 @@
     <% } else { %>
       <ol class="nav"><%= __('none') %></ol>
     <% } %>
-    </div>
   </aside>
 <% } %>
