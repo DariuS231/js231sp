@@ -19,7 +19,7 @@ With this simple code you are able to generate a CSV file with JavaScript and al
 var ieOldFn = null;
 var fileName = 'peopleCsvFile.csv';
 window.URL = window.URL || window.webkitURL;
-var blobObj = new Blob(\['Id,Name\n1,Desiree\n2,Nell\n3,Jacob\n4,Paula\n5,Rowan'\]);
+var blobObj = new Blob(['Id,Name\n1,Desiree\n2,Nell\n3,Jacob\n4,Paula\n5,Rowan']);
 var lnkElement = document.getElementById('lnkFile');
 
 if (typeof window.navigator.msSaveOrOpenBlob != "undefined") { //Internet Explorer

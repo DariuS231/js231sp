@@ -28,13 +28,107 @@ type your custom css here
 .widget_athemes_social_icons_pic_and_buttons{
   width: 100%;
 }
+.widget_athemes_social_icons_pic_and_buttons_avatar img{
+  width: 100%;
+}
+.widget_athemes_social_icons_pic_and_buttons_buttons{
+  
+}
 .widget_athemes_social_icons_pic_and_buttons > div{
-  padding: 5px;margin: 0;display: inline-block;vertical-align: top;
+  margin: 0;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .widget_athemes_social_icons_description{
-  text-align: justify; padding: 0 10px; font-size: 14px;
+  padding-top: 10px;
+  text-align: justify;
+  font-size: 14px;
 }
 .post_share_full_name{
   color: #ff2828;
+}
+
+
+
+/* My Skills */
+
+
+
+/* Stats */
+.stats-container {
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.stats-container .stat-item {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  width: 19%;
+  padding: 2%;
+}
+
+.stats-container .stat-item img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.stats-container .stat-path,
+.stats-container .stat-back {
+  stroke-linecap: round;
+  stroke-width: 7;
+  fill: none;
+}
+
+@media only screen and (max-width: 580px) {
+  .stats-container .stat-item {
+    width: 50%;
+  }
+}
+
+/* Tooltip */
+.stats-container .skills-tooltip .skills-tooltiptext {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  background: #dddddd;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-align: center;
+  white-space: nowrap;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.stats-container .skills-tooltip .skills-tooltiptext span {
+  display: block;
+  color: #ffffff;
+}
+
+.stats-container .skills-tooltip .skills-tooltiptext:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent currentColor transparent;
+}
+
+.stats-container .skills-tooltip:hover .skills-tooltiptext {
+  visibility: visible;
 }
