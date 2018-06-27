@@ -16,7 +16,7 @@ photos:
 
 The goal of this article is to have a single page application developed with angular 2. Apart from connecting to office 365  with Azure Active Directory credentials, the application shows some data fetched from the office 365 tenant such as OneDrive files and Outlook Emails from the current logged user. It was all accomplished using the Angular2 routing system.
 <!-- more -->
-Even though this is the second part of the [Angular2 and Office365 with ADAL unified APIs \[PART 1\]](http://js231sharepoint.com/2015/10/15/angular2-and-office365-with-adal-unified-apis-part-1/), a few things may be different as angular2 beta version has just been released. In the previous article I worked with the alpha version, whereas in this example I used angular2 beta version.
+Even though this is the second part of the [Angular2 and Office365 with ADAL unified APIs \[PART 1\]](/2015/10/15/angular2-and-office365-with-adal-unified-apis-part-1/), a few things may be different as angular2 beta version has just been released. In the previous article I worked with the alpha version, whereas in this example I used angular2 beta version.
 
 Now, let's begin!
 
@@ -61,16 +61,16 @@ Apart from importing some components from angular2 libraries to be able to confi
 Finally, included all the routes components and the ROUTER_DIRECTIVE within the component decorator.
 
 ``` typescript
-@RouteConfig(\[
-  { path: '', redirectTo: \['/Home'\] },
+@RouteConfig([
+  { path: '', redirectTo: ['/Home'] },
   { path: '/home', component: Home, as: 'Home' },
   { path: '/user', component: User, as: 'User' },
   { path: '/files', component: Files, as: 'Files' },
   { path: '/messages', component: Messages, as: 'Messages' }
-\])
+])
 @Component({
   ...
-  directives: \[Home, User, Files, Messages, ROUTER_DIRECTIVES\],
+  directives: [Home, User, Files, Messages, ROUTER_DIRECTIVES],
   ...
 })
 ```

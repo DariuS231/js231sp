@@ -8,7 +8,7 @@ menu:
   Archives: archives
   Categories: categories
   Tags: tags
-#  About: about
+  About: about
 rss: /atom.xml
 
 since: 2015
@@ -31,7 +31,8 @@ avatar:
   
 
 # AboutPage background
-about_big_image: [gallery/backgroud/4436335-wallpapers.jpg, gallery/backgroud/4436402-wallpapers.jpg, gallery/backgroud/4436335-wallpapers.jpg, gallery/backgroud/4436674-wallpapers.jpg, gallery/backgroud/4436285-wallpapers.jpg, gallery/backgroud/4436507-wallpapers.jpg, gallery/backgroud/4436278-wallpapers.jpg, gallery/backgroud/4436140-wallpapers.jpg, gallery/backgroud/4436054-wallpapers.jpg, gallery/backgroud/4436843-wallpapers.jpg, gallery/backgroud/4436228-wallpapers.jpg, gallery/backgroud/4436464-wallpapers.jpg, gallery/backgroud/4436430-wallpapers.jpg, gallery/backgroud/4436454-wallpapers.jpg]
+# about_big_image: [gallery/backgroud/4436335-wallpapers.jpg, gallery/backgroud/4436402-wallpapers.jpg, gallery/backgroud/4436335-wallpapers.jpg, gallery/backgroud/4436674-wallpapers.jpg, gallery/backgroud/4436285-wallpapers.jpg, gallery/backgroud/4436507-wallpapers.jpg, gallery/backgroud/4436278-wallpapers.jpg, gallery/backgroud/4436140-wallpapers.jpg, gallery/backgroud/4436054-wallpapers.jpg, gallery/backgroud/4436843-wallpapers.jpg, gallery/backgroud/4436228-wallpapers.jpg, gallery/backgroud/4436464-wallpapers.jpg, gallery/backgroud/4436430-wallpapers.jpg, gallery/backgroud/4436454-wallpapers.jpg]
+about_big_image: []
 
 
 # Homepage thumbnail
@@ -78,7 +79,84 @@ social:
     email: dario17231@gmail.com
     linkedin: https://www.linkedin.com/in/darius231/
 
-
+    # https://www.w3schools.com/colors/colors_picker.asp
+skills:
+  SharePoint:
+    image: /gallery/skills/skill-sharepoint.png
+    statback: 67aae4
+    statpack: 2172B9
+    statlevel: 97
+  HTML5:
+    image: /gallery/skills/skill-html.png
+    statback: eeb5aa
+    statpack: DB634C
+    statlevel: 95
+  TypeScript:
+    image: /gallery/skills/skill-typescript.png
+    statback: 4db8ff
+    statpack: 007ACC
+    statlevel: 95
+  PowerShell:
+    image: /gallery/skills/skill-powershell.png
+    statback: 7fb6e6
+    statpack: 277DC9
+    statlevel: 90
+  JavaScript:
+    image: /gallery/skills/skill-javascript.png
+    statback: ffdb66
+    statpack: EDB600
+    statlevel: 90
+  NodeJS:
+    image: /gallery/skills/skill-node.png
+    statback: c0e19d
+    statpack: 8CC84B
+    statlevel: 90
+  "Office 365":
+    image: /gallery/skills/skill-o365.png
+    statback: fe7d4d
+    statpack: DA3A01
+    statlevel: 90
+  "Visual Studio Code":
+    image: /gallery/skills/skill-vscode.png
+    statback: 4db7fe
+    statpack: 0179CB
+    statlevel: 90
+  React:
+    image: /gallery/skills/skill-react.png
+    statback: cdf3fe
+    statpack: 61DAFB
+    statlevel: 85
+  CSS3:
+    image: /gallery/skills/skill-css.png
+    statback: 9dc7e2
+    statpack: 3C8FC4
+    statlevel: 80
+  Azure:
+    image: /gallery/skills/skill-azure.png
+    statback: 5ea3ed
+    statpack: 1566BF
+    statlevel: 80
+  "C#":
+    image: /gallery/skills/skill-c-sharp.png
+    statback: 80bdff
+    statpack: 007AFF
+    statlevel: 80
+  Gulp:
+    image: /gallery/skills/skill-gulp.png
+    statback: f7baba
+    statpack: EB4A4B
+    statlevel: 75
+  Git:
+    image: /gallery/skills/skill-git.png
+    statback: f8ada0
+    statpack: EF4F32
+    statlevel: 75
+  Angular:
+    image: /gallery/skills/skill-angular.png
+    statback: ff4d73
+    statpack: DD0031
+    statlevel: 70
+  
 # Search
 search:
     insight: true # you need to install `hexo-generator-json-content` before using Insight Search

@@ -40,6 +40,9 @@
       <% } else { %>
         <%- post.content %>
       <% } %>
+      <% if (!!page.showmyskills){ %>
+        <%- partial('_widget/myskills') %>
+      <% } %>
       <% if (!index){ %>
         <%- partial('post/share',{index: index, post: post}) %>
       <% } %>

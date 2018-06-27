@@ -1,0 +1,21 @@
+<% if (theme.skills){ %>
+  <h2>My Main Skills</h2>
+  <div class="stats-container">
+    <% Object.keys(theme.skills).forEach(function(key) { %>
+        <div class="stat-item skills-tooltip" data-stat="<%= theme.skills[key].statlevel %>" data-soft="<%= key %>" data-color="#<%= theme.skills[key].statback %>">
+          <span class="skills-tooltiptext"><span></span></span>
+          <img src="<%= theme.skills[key].image %>" alt="">
+          <svg viewbox="0 0 100 100" x="0px" y="0px" enable-background="new 0 0 100 100" xml:space="preserve">
+            <path class="stat-back" stroke="#<%= theme.skills[key].statback %>" d="M50 10 a 40 40 0 0 1 0 80 a 40 40 0 0 1 0 -80"/>
+            <path class="stat-path" stroke="#<%= theme.skills[key].statpack %>" d="M50 10 a 40 40 0 0 1 0 80 a 40 40 0 0 1 0 -80"/>
+          </svg>
+        </div>
+    <% }) %>
+
+  </div>
+  <script>
+    $(window).bind("load", function() {
+      JS231SP.CORE.MySkills($);
+    });  
+  </script>
+<% } %>
