@@ -17,7 +17,7 @@
 										<% if (key == 'email'){ %>
 											<li><a href="mailto:<%= theme.social.links[key] %>" title="<%=key.trim()%>"><i class="fa fa-envelope" aria-hidden="true"></i></a></li> 
 										<% } else {%>
-											<li><a href="<%= theme.social.links[key] %>" title="<%=key.trim()%>"><i class="fa fa-<%= key.toLowerCase() %>" aria-hidden="true"></i></a></li> 
+											<li><a href="<%= theme.social.links[key] %>" target="_blank" title="<%=key.trim()%>"><i class="fa fa-<%= key.toLowerCase() %>" aria-hidden="true"></i></a></li> 
 										<% }%>
 								<% }) %>
 								</ul>
