@@ -23,6 +23,7 @@ An MPN package to help de-tokenizing values within our source code when building
 At some point while working with SPFx solutions, I found myself needing some "constant" information in the code, but at the same time having to update the values of the "constant" when moving between different environments (e.g.: Azure APP ID, API URLs, etc...)
 
 What options did I have?
+* Creating a web part property for each value I needed.
 * Updating the code and changing the values of the so called "constants" before building for each environment
 * Relying on node environment variables
 
