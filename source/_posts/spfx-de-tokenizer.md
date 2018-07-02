@@ -14,7 +14,7 @@ photos:
     - /gallery/posts/SPFx-Detokenizer.png
 ---
 
-An MPN package to help de-tokenizing values within our source code when building or debugging SPFx solutions, avoiding having some information hardcoded in the code or relaying on environment variables.
+An NPM package to help de-tokenizing values within our source code when building or debugging SPFx solutions, avoiding having some information hardcoded in the code or relaying on environment variables.
 
 [pfx-detokenize NPM package](https://www.npmjs.com/package/spfx-detokenize)
 <!-- more -->
