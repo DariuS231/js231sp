@@ -32,3 +32,9 @@
     </div>
   </div>
 <% } %>
+
+<script>
+	var valuePage = <%- page.hidemyinfo %>;
+	var pageTitle = "<%- title %>";
+	var isABoutPage = <%- (!!theme.social.title && !page.hidemyinfo) %>;
+</script>
