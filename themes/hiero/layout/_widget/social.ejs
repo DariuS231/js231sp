@@ -1,13 +1,13 @@
 <% if (theme.social){ %>
 	<div class="widget-wrap">
-	<% var title = (!!theme.social.title && !page.hidemyinfo) ? theme.social.title : __('social'); %>
+	<% var title = (!!theme.social.title && !hidemyinfo) ? theme.social.title : __('social'); %>
 		<h3 class="widget-title"><%= title %></h3>
     <div class="widget widget_athemes_social_icons">
 			<div class="widget_athemes_social_icons_pic_and_buttons">
-				<% var socialPanelWith = ((theme.social.avatar && !page.hidemyinfo) && theme.social.links) ? "50" : "100"; %>
-				<% var paddingLeft = ((theme.social.avatar && !page.hidemyinfo) && theme.social.links) ? "padding-left: 10px;" : ""; %>
+				<% var socialPanelWith = ((theme.social.avatar && !hidemyinfo) && theme.social.links) ? "50" : "100"; %>
+				<% var paddingLeft = ((theme.social.avatar && !hidemyinfo) && theme.social.links) ? "padding-left: 10px;" : ""; %>
 					<div class="widget_athemes_social_icons_pic_and_buttons_avatar" style="width: <%= socialPanelWith %>%;">
-						<% if (theme.social.avatar && !page.hidemyinfo) { %>
+						<% if (theme.social.avatar && !hidemyinfo) { %>
 							<img src="<%= theme.social.avatar %>" alt="<%= title %>" >
 						<% } %>
 					</div><div  style="width: <%= socialPanelWith %>%; <%= paddingLeft %>;">
@@ -24,7 +24,7 @@
 							<% } %>
 					</div>
 			</div>
-				<% if (theme.social.description && !page.hidemyinfo) { %>
+				<% if (theme.social.description && !hidemyinfo) { %>
 					<div class="widget_athemes_social_icons_description">
 							<%- theme.social.description %>
 					</div>
@@ -34,7 +34,7 @@
 <% } %>
 
 <script>
-	var valuePage = <%- page.hidemyinfo %>;
+	var valuePage = <%- hidemyinfo %>;
 	var pageTitle = "<%- title %>";
-	var isABoutPage = <%- (!!theme.social.title && !page.hidemyinfo) %>;
+	var isABoutPage = <%- (!!theme.social.title && !hidemyinfo) %>;
 </script>
