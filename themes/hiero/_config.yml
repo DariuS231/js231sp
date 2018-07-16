@@ -62,6 +62,9 @@ widgets:
 - recent_posts
 - tagcloud
 
+jsonContent:
+  ignore:
+    - 404.html
 # Social Links
 # Key is the name of FontAwsome icon.
 # Value is the target link (E.g. GitHub: https://github.com/iTimeTraveler)
