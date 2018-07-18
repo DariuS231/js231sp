@@ -1,4 +1,4 @@
-<% if (theme.skills){ %>
+<% if (is_current("about", false) && theme.skills){ %>
   <h2>My Main Skills</h2>
   <div class="stats-container">
     <% Object.keys(theme.skills).forEach(function(key) { %>
