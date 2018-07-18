@@ -1,16 +1,14 @@
 <% if (theme.social){ %>
 	<div class="widget-wrap">
-	<% var title = (!!theme.social.title && !page.hidemyinfo) ? theme.social.title : __('social'); %>
-		<h3 class="widget-title"><%= title %></h3>
+		<h3 class="widget-title"><%= theme.social.title %></h3>
     <div class="widget widget_athemes_social_icons">
 			<div class="widget_athemes_social_icons_pic_and_buttons">
-				<% var socialPanelWith = ((theme.social.avatar && !page.hidemyinfo) && theme.social.links) ? "50" : "100"; %>
-				<% var paddingLeft = ((theme.social.avatar && !page.hidemyinfo) && theme.social.links) ? "padding-left: 10px;" : ""; %>
+				<% var socialPanelWith = (theme.social.avatar && theme.social.links) ? "50" : "100"; %>
 					<div class="widget_athemes_social_icons_pic_and_buttons_avatar" style="width: <%= socialPanelWith %>%;">
-						<% if (theme.social.avatar && !page.hidemyinfo) { %>
-							<img src="<%= theme.social.avatar %>" alt="<%= title %>" >
+						<% if (theme.social.avatar) { %>
+							<img src="<%= theme.social.avatar %>" alt="<%= theme.social.title %>" >
 						<% } %>
-					</div><div  style="width: <%= socialPanelWith %>%; <%= paddingLeft %>;">
+					</div><div class="widget_athemes_social_icons_pic_and_buttons_avatar_buttons" style="width: <%= socialPanelWith %>%; padding-left: 10px;">
 							<% if (theme.social.links){ %>
 								<ul class="clearfix widget-social-icons">   
 								<% Object.keys(theme.social.links).forEach(function(key) { %>
@@ -24,11 +22,26 @@
 							<% } %>
 					</div>
 			</div>
-				<% if (theme.social.description && !page.hidemyinfo) { %>
+				<% if (theme.social.description ) { %>
 					<div class="widget_athemes_social_icons_description">
 							<%- theme.social.description %>
 					</div>
 				<% } %>
     </div>
   </div>
+
+<script>
+	if(location.pathname.match('about')){
+		var title = document.querySelector(".widget-title");
+		var buttons = document.querySelector(".widget_athemes_social_icons_pic_and_buttons_avatar_buttons");
+		var toRemove = document.querySelectorAll(".widget_athemes_social_icons_pic_and_buttons_avatar, .widget_athemes_social_icons_description");
+		
+		title.innerHTML = "<%- __('social') %>";
+		buttons.setAttribute("style", "width: 100%; padding-left: 0px;");
+		for (let i = 0; i < toRemove.length; i++) {
+			const element = toRemove[i];
+			element.remove();			
+		}
+	}
+</script>
 <% } %>

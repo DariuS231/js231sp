@@ -3,7 +3,7 @@ type your custom css here
 
 */
 /**   Post Share Buttons   **/
-.post_share{}
+/* .post_share{} */
 
 .post_share_title{
   text-align: right; color: #ff2828;
@@ -28,12 +28,15 @@ type your custom css here
 .widget_athemes_social_icons_pic_and_buttons{
   width: 100%;
 }
+.widget_athemes_social_icons_pic_and_buttons ul{
+  margin-bottom: 0;
+}
 .widget_athemes_social_icons_pic_and_buttons_avatar img{
   width: 100%;
 }
-.widget_athemes_social_icons_pic_and_buttons_buttons{
+/* .widget_athemes_social_icons_pic_and_buttons_buttons{
   
-}
+} */
 .widget_athemes_social_icons_pic_and_buttons > div{
   margin: 0;
   display: inline-block;
@@ -87,7 +90,7 @@ type your custom css here
 
 @media only screen and (max-width: 580px) {
   .stats-container .stat-item {
-    width: 50%;
+    width: 32%;
   }
 }
 

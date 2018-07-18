@@ -62,6 +62,9 @@ widgets:
 - recent_posts
 - tagcloud
 
+jsonContent:
+  ignore:
+    - 404.html
 # Social Links
 # Key is the name of FontAwsome icon.
 # Value is the target link (E.g. GitHub: https://github.com/iTimeTraveler)
@@ -235,7 +238,7 @@ donate:
 # Automatic page load progress bar by PACE.js
 progressBar:
   enable: true #switch
-  themeCSS: https://cdn.rawgit.com/HubSpot/pace/4afddfb3/themes/orange/pace-theme-flash.css    #PATH to PACE theme CSS, support relative / absolute path
+  themeCSS: /css/pace.css    #PATH to PACE theme CSS, support relative / absolute path
 
 # Ad
 ad:
