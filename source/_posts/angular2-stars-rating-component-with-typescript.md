@@ -15,8 +15,8 @@ Playing around with Angular 2, I thought that a star-like rating component would
 
 Let's see how it's done.
 <!-- more -->
-Component class
-===============
+# Component class
+
 
 For the rating component class, apart from importing the **Component** module from angular2, I also imported 3 additional modules that would allow me to communicate between the container component and the rating component. The other modules I imported from angular2 are:
 
@@ -57,19 +57,18 @@ export class RatingComponent {
 }
 ```
 
-Component Template
-==================
+# Component Template
 
 For the template I put together a radio button and a label for each rating (star). Both, the radio button and the label, had its own properties to make the component work properly, as follows:
 
-### The radio buttons
+## The radio buttons
 
 *   The type attribute set to radio
 *   The value attribute for each rating level.
 *   The name attribute bound to imputsName property of the rating component.
 *   The checked attribute that compares the current rating with the value of the radio button.
 
-### The labels
+## The labels
 
 *   The title attribute with some text according to its rating level.
 *   The click event sending the rating level as a parameter on click.
@@ -115,8 +114,7 @@ Notice on the HTML that I started from the highest rating to the lowest. This�
 
 The click event was bound to the labels instead of the radio buttons because the radio buttons are hidden by CSS styles and the user would actually click the labels.
 
-Component styles
-================
+# Component styles
 
 The styles played a very important role for this component as it gave the template a stars-like rating appearance. I added comments over each rule within the code.
 
@@ -182,8 +180,7 @@ Colour for hovered stars when decreasing the rating
 }
 ```
 
-Using the component
-===================
+# Using the component
 
 Once all the elements for the rating components were ready, it was time to put the component in use.
 
@@ -229,15 +226,13 @@ export class AppComponent {
 ```
 And that's it! Have a look at the live demo to see how it works.
 
-Live Demo
-=========
+# Live Demo
 
 Here is a demo of a basic table that uses the component. Give it a try!
 
 <iframe src="//embed.plnkr.co/Qi6tEdIyaRoGgSj2z4M9/" style="width: 100%; height: 400px;"></iframe>
 
-Code
-====
+# Code
 
 You can find the code [here](https://github.com/DariuS231/NG2Rating).
 

@@ -35,7 +35,7 @@ JS231SP.CORE.MySkills = function ($) {
         var thisTooltip = thisStat.find(".skills-tooltiptext");
         var statPath = thisStat.find(".stat-path");
         var thisTooltipInner = thisTooltip.find("span");
-        
+
         var dataPercentage = thisStat.attr("data-stat");
         var dataSoftware = thisStat.attr("data-soft");
         var dataColor = thisStat.attr("data-color");
@@ -44,7 +44,7 @@ JS231SP.CORE.MySkills = function ($) {
         statPath.css({ "transition": "1.2s cubic-bezier(0.35, 2, 0.35, 0.3)" });
 
         setStatPosition(statPath, (_dashLength - ((dataPercentage / 100) * _dashLength)))
-        
+
         // thisTooltipInner.text(dataSoftware + " " + dataPercentage + "%");
         thisTooltipInner.text(dataSoftware);
 
@@ -55,6 +55,34 @@ JS231SP.CORE.MySkills = function ($) {
 
     setStatPosition('.stats-container .stat-path', _dashLength);
 };
+
+JS231SP.CORE.ReadingProgress = (function ($) {
+    "use strict";
+    var winHeight, docHeight, progressBar, max, value;
+
+    var setProgress = function () {
+        value = $(window).scrollTop();
+        var perc = ((value/max) * 100).toFixed(3);
+        
+        progressBar.find('.value').attr('style', 'width:' + perc + '%;');
+    };
+
+    var init = function () {
+        
+
+        winHeight = $(window).height();
+        docHeight = $(document).height()
+        progressBar = $('.progress')
+        /* Set the max scrollable area */
+        max = docHeight - winHeight;
+
+        $(document).on('scroll', setProgress);
+        setProgress();
+    }
+    return {
+        Init: init
+    }
+})($);
 
 
 JS231SP.CORE.Init = (function ($) {

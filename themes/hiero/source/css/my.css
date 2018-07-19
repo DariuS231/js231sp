@@ -135,3 +135,44 @@ type your custom css here
 .stats-container .skills-tooltip:hover .skills-tooltiptext {
   visibility: visible;
 }
+
+
+
+
+
+
+.reading-progress {
+  height: 3.5em;
+  width: 100%;
+  background-color: rgba(255, 40, 40, 0.5);
+  position: relative;
+  /* margin-top: 1em; */
+  border-radius: 0;
+  color: white;
+ font-weight: bolder;
+}
+.reading-progress:before {
+  content: attr(data-label);
+  font-size: 0.8em;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+  left: 0;
+  right: 0;
+}
+.reading-progress .readingText{
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 0;
+  font-size: 12px;
+  left: 0;
+  text-align: center;
+  font-weight: bold;
+  font-size: 120%;
+}
+.reading-progress .value {
+  background-color: #ff2828;
+  display: inline-block;
+  height: 100%;
+  opacity: 0.5;
+}
