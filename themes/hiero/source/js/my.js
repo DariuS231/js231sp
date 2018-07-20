@@ -58,30 +58,34 @@ JS231SP.CORE.MySkills = function ($) {
 
 JS231SP.CORE.ReadingProgress = (function ($) {
     "use strict";
-    var winHeight, docHeight, progressBar, max, value;
+    var progressBar, max;
 
     var setProgress = function () {
-        value = $(window).scrollTop();
-        var perc = ((value/max) * 100).toFixed(3);
-        
+        var value = $(window).scrollTop();
+        var perc = ((value / max) * 100).toFixed(3);
+
         progressBar.find('.value').attr('style', 'width:' + perc + '%;');
     };
 
-    var init = function () {
-        
+    var init = function (selectors) {
+        var winHeight = $(window).height();
+        var docHeight = 0;
+        for (var i = 0; i < selectors.length; i++) {
+            var height = $(selectors[i]).height();
+            if (!isNaN(height)) {
+                docHeight += height;
+            }
 
-        winHeight = $(window).height();
-        docHeight = $(document).height()
-        progressBar = $('.progress')
-        /* Set the max scrollable area */
+        }
+        
+        progressBar = $('.progress');
+
         max = docHeight - winHeight;
 
         $(document).on('scroll', setProgress);
         setProgress();
     }
-    return {
-        Init: init
-    }
+    return { Init: init };
 })($);
 
 
