@@ -100,6 +100,7 @@
     $(this).find('img').each(function(){
       if ($(this).parent().hasClass('fancybox')) return;
       if ($(this).parent().parent().hasClass('entry-thumbnail')) return;
+      if ($(this).parent().parent().hasClass('skills-tooltip')) return;
 
       var alt = this.alt;
 
