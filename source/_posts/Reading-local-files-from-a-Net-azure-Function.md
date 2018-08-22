@@ -7,114 +7,83 @@ tags:
   - .Net
 categories:
   - Azure Functions
+photos:
+    - /gallery/posts/Reading-local-files-from-a-Net-azure-Function.png
 ---
 
-At some point when working with Azure functions, you might find yourself in the need of reading the content of some local files located in the same directory of the function itself.
+When working with Azure Functions, you might find yourself in the need of reading the content of some local files located in the same directory of the function your are working on.
+
+I found two ways of achieving this without having to hard-code the full path of the file you are trying to read, the two options are:
+
+1. By using the Context of the Function.
+2. By using an Environment Variable
 
 <!-- more -->
 
-I created two functions and uploaded two documents through `Advanced tools (Kudu)` to a folder colled `TextFiles`.
+For the post, I created two functions `ReadFileByContext` and `ReadFileByVariable`.
+
+{% asset_image "Reading-local-files-from-a-Net-azure-Function-Functions.png" "Local files" %}
+
+And also, uploaded two documents through `Advanced tools (Kudu)` to a folder called `Files`.
 
 {% asset_image "Reading-local-files-from-a-Net-azure-Function-Local-files.png" "Local files" %}
 
-I found two ways of achieving this:
-
-1. By using an enviroment variable
-2. By using the Context of the Function.
-
 
 ## By Function Context
+
+Initially, when you create a function from Visual Studio or from Azure portal, you get a very basic structure of a function thats receives two parameters.
+
+Something like this:
+
 ``` csharp
-public static HttpResponseMessage Run(HttpRequestMessage req, TraceWriter log, ExecutionContext context)
+public static HttpResponseMessage Run(HttpRequestMessage req, TraceWriter log)
+```
+
+The trick is to add a third parameter of type `ExecutionContext` to the function. With the `context` parameter you can get the `FunctionAppDirectory` property path and the value of this property should be `D:\home\site\wwwroot`.
+
+With this value you only need to put together the rest of the paths and read the content of the file.
+
+``` csharp
+public static HttpResponseMessage Run(HttpRequestMessage req, TraceWriter log, ExecutionContext ctx)
 {
-    var filePath = Path.Combine(context.FunctionAppDirectory, "TextFiles", "DummyFileByContext.txt");
+    var filePath = Path.Combine(ctx.FunctionAppDirectory, "Files", "DummyFileByContext.txt");
  
     var fileContent = System.IO.File.ReadAllText(filePath);
     return  req.CreateResponse(HttpStatusCode.OK, $"File Content: {fileContent}");
 }
-
 ```
 
+Here is a screenshot of the response when calling the Azure function.
+
+{% asset_image "Reading-local-files-from-a-Net-azure-Function-byContext-result.png" "Read By Context" %}
+
 ## By Environment Variable
+
+For this approach only you need get the value of the `HOME` Environment Variable. and the value should `D:\home`.
+
+``` csharp
+Environment.GetEnvironmentVariable("HOME", EnvironmentVariableTarget.Process);
+```
+
+With the value of the variable just concatenate the rest of the path and you should be good to go.
+
 ``` csharp
 public static HttpResponseMessage Run(HttpRequestMessage req, TraceWriter log)
 {
     var home = Environment.GetEnvironmentVariable("HOME", EnvironmentVariableTarget.Process);
-    var filePath =  Path.Combine(home, @"site\wwwroot", "TextFiles", "DummyFileByEnvironment.txt");
+    var filePath =  Path.Combine(home, @"site\wwwroot\Files", "DummyFile_ReadByVariable.txt");
     
     var fileContent = System.IO.File.ReadAllText(filePath);
     return  req.CreateResponse(HttpStatusCode.OK, $"File Content: {fileContent}");
 }
 ```
 
-The code bellow is a simple setting you can use to avoid using absolute paths.
+Here is a screenshot of the response when calling the Azure function.
+
+{% asset_image "Reading-local-files-from-a-Net-azure-Function-byVariable-result.png" "Read By Variable" %}
 
 
-
-COSE GOES HERE
-
-
-
-Initially, when you create the function, the function method only has two parameters. But by adding the context parameter to the method you should now be able to get additional information from the context of the function.
-
-
-
-And that’s it, with this piece of code you can now use relative paths instead of absolutes and not having to worry changing the path when moving between environments.
-
+Thats it! With this approach you will forget about hard-coded paths and the best of everything is that it also work on local environments when working with Visual Studio in you development machine.
 
 
 Hope you like it and find it useful.
-
-``` csharp
-public static HttpResponseMessage Run(HttpRequestMessage req, TraceWriter log)
-{
-    log.Info("C# HTTP trigger function processed a request.");
-
-    // parse query parameter
-    string name = req.GetQueryNameValuePairs()
-        .FirstOrDefault(q => string.Compare(q.Key, "name", true) == 0)
-        .Value;
-
-    if (name == null)
-    {
-        // Get request body
-        dynamic data = await req.Content.ReadAsAsync<object>();
-        name = data?.name;
-    }
-
-    return name == null
-        ? req.CreateResponse(HttpStatusCode.BadRequest, "Please pass a name on the query string or in the request body")
-        : req.CreateResponse(HttpStatusCode.OK, "Hello " + name);
-}
-```
-
-
-``` csharp
-
-private static string GetEnvironmentVariable(string name) => Environment.GetEnvironmentVariable(name, EnvironmentVariableTarget.Process);
-private static string GetScriptPath() => Path.Combine(GetEnvironmentVariable("HOME"), @"site\wwwroot");
-
-
-
-public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceWriter log, ExecutionContext context)
-{
-    log.Info("C# HTTP trigger function processed a request.");
-
-    Path.Combine(context.FunctionAppDirectory, "Certs", Core.Common.WebConfig.CertFileName);
-    // parse query parameter
-    string name = req.GetQueryNameValuePairs()
-        .FirstOrDefault(q => string.Compare(q.Key, "name", true) == 0)
-        .Value;
-
-    if (name == null)
-    {
-        // Get request body
-        dynamic data = await req.Content.ReadAsAsync<object>();
-        name = data?.name;
-    }
-
-    return name == null
-        ? req.CreateResponse(HttpStatusCode.BadRequest, "Please pass a name on the query string or in the request body")
-        : req.CreateResponse(HttpStatusCode.OK, "Hello " + name);
-}
-```
