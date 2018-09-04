@@ -9,6 +9,7 @@
     <div class="article-meta">
       <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
       <%- partial('post/busuanzi-analytics',{index: index}) %>
+      <% if (!is_current("about", false) && !is_current("cv", false) && !is_post()){ %><span style="float:right;"><%- readingTime(post.content, 'min.', 100) %></span><% } %>
     </div>
     <div class="article-entry" itemprop="articleBody">
       <% if (post.excerpt && index){ %>
@@ -66,13 +67,22 @@
 
 <!-- Table of Contents -->
 <% if (!index && is_post() && theme.post_catalog.enable){ %>
-  <aside id="sidebar">
-    <div id="toc" class="toc-article">
-    <strong class="toc-title"><%= __('contents') %></strong>
+<aside id="sidebar">
+    <div id="toc" class="toc-article" style="width: 20%;">
+    <!-- <strong class="toc-readingTime">Reading Progress</strong>-->
+    <div class="progress reading-progress">
+      <span class="value" style="width:0%;"></span>
+      <span class="readingText"><%- readingTime(post.content, 'min read.', 100, true) %></span>
+    </div>
     <% if (toc(post.content) != ""){ %>
+      <strong class="toc-title"><%= __('contents') %></strong>
       <%- toc(post.content, { "class": "nav" }) %>
-    <% } else { %>
-      <ol class="nav"><%= __('none') %></ol>
     <% } %>
-  </aside>
+    </aside>
+  <script>
+    $(window).bind("load", function() {
+      var selectors = ['.article-gallery','.article-header','.article-meta','.article-entry','#allheader'];
+      JS231SP.CORE.ReadingProgress.Init(selectors);
+    });  
+  </script>
 <% } %>

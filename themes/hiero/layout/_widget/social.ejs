@@ -1,16 +1,16 @@
 <% if (theme.social){ %>
 	<div class="widget-wrap">
-	<% var title = (!!theme.social.title && !page.hidemyinfo) ? theme.social.title : __('social'); %>
+	<% var title = (theme.social.title && !is_current("about", false)) ? theme.social.title : __('social'); %>
 		<h3 class="widget-title"><%= title %></h3>
     <div class="widget widget_athemes_social_icons">
 			<div class="widget_athemes_social_icons_pic_and_buttons">
-				<% var socialPanelWith = ((theme.social.avatar && !page.hidemyinfo) && theme.social.links) ? "50" : "100"; %>
-				<% var paddingLeft = ((theme.social.avatar && !page.hidemyinfo) && theme.social.links) ? "padding-left: 10px;" : ""; %>
-					<div class="widget_athemes_social_icons_pic_and_buttons_avatar" style="width: <%= socialPanelWith %>%;">
-						<% if (theme.social.avatar && !page.hidemyinfo) { %>
+			<% var imageDivStyle = (theme.social.avatar && theme.social.links && !is_current("about", false)) ? "width: 50%;" : "display:none;"; %>
+			<% var buttonsDivStyle = (theme.social.avatar && theme.social.links && !is_current("about", false)) ? "width: 50%; padding-left: 10px;" : "width: 100%; padding-left: 0px;"; %>
+					<div class="widget_athemes_social_icons_pic_and_buttons_avatar" style="<%= imageDivStyle %>">
+						<% if (theme.social.avatar && !is_current("about", false)) { %>
 							<img src="<%= theme.social.avatar %>" alt="<%= title %>" >
 						<% } %>
-					</div><div  style="width: <%= socialPanelWith %>%; <%= paddingLeft %>;">
+					</div><div class="widget_athemes_social_icons_pic_and_buttons_avatar_buttons" style="<%= buttonsDivStyle %>">
 							<% if (theme.social.links){ %>
 								<ul class="clearfix widget-social-icons">   
 								<% Object.keys(theme.social.links).forEach(function(key) { %>
@@ -24,11 +24,11 @@
 							<% } %>
 					</div>
 			</div>
-				<% if (theme.social.description && !page.hidemyinfo) { %>
-					<div class="widget_athemes_social_icons_description">
-							<%- theme.social.description %>
-					</div>
-				<% } %>
+			<% if (theme.social.description && !is_current("about", false) ) { %>
+				<div class="widget_athemes_social_icons_description">
+						<%- theme.social.description %>
+				</div>
+			<% } %>
     </div>
   </div>
 <% } %>
