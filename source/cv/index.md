@@ -14,7 +14,10 @@ I´ve been a Software Developer specialized in Microsoft technologies for over 8
 
 ## WORK EXPERIENCE
 
-### SharePoint Developer (May 2015 – Present) - [Content and Code Ltd](https://www.contentandcode.com) - London, UK
+### Lead SharePoint and Office 365 Developer (August 2018 – Present) - [Orbus Software](https://www.orbussoftware.com) - London, UK
+
+
+### SharePoint Developer (May 2015 – July 2018) - [Content and Code Ltd](https://www.contentandcode.com) - London, UK
 
 * **UNICEF** _(SharePoint Online, Azure services)_ – Technical Architecture Design, development and deployment of Azure Functions, Azure SQL Databases, Azure KeyVault, Modern SharePoint Web Parts.
 
