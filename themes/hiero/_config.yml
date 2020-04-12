@@ -89,15 +89,20 @@ skills:
     statback: 67aae4
     statpack: 2172B9
     statlevel: 97
-  HTML5:
-    image: /gallery/skills/skill-html.png
-    statback: eeb5aa
-    statpack: DB634C
+  "C#":
+    image: /gallery/skills/skill-c-sharp.png
+    statback: 80bdff
+    statpack: 007AFF
     statlevel: 95
   TypeScript:
     image: /gallery/skills/skill-typescript.png
     statback: 4db8ff
     statpack: 007ACC
+    statlevel: 95
+  HTML5:
+    image: /gallery/skills/skill-html.png
+    statback: eeb5aa
+    statpack: DB634C
     statlevel: 95
   PowerShell:
     image: /gallery/skills/skill-powershell.png
@@ -124,41 +129,51 @@ skills:
     statback: 4db7fe
     statpack: 0179CB
     statlevel: 90
+  Azure:
+    image: /gallery/skills/skill-azure.png
+    statback: 5ea3ed
+    statpack: 1566BF
+    statlevel: 90
   React:
     image: /gallery/skills/skill-react.png
     statback: cdf3fe
     statpack: 61DAFB
     statlevel: 85
-  CSS3:
-    image: /gallery/skills/skill-css.png
-    statback: 9dc7e2
-    statpack: 3C8FC4
-    statlevel: 80
-  Azure:
-    image: /gallery/skills/skill-azure.png
-    statback: 5ea3ed
-    statpack: 1566BF
-    statlevel: 80
-  "C#":
-    image: /gallery/skills/skill-c-sharp.png
+  Git:
+    image: /gallery/skills/skill-git.png
+    statback: f8ada0
+    statpack: EF4F32
+    statlevel: 85
+  "Azure DevOps":
+    image: /gallery/skills/skill-azuredevops.png
     statback: 80bdff
-    statpack: 007AFF
-    statlevel: 80
+    statpack: 0078d4
+    statlevel: 75
   Gulp:
     image: /gallery/skills/skill-gulp.png
     statback: f7baba
     statpack: EB4A4B
     statlevel: 75
-  Git:
-    image: /gallery/skills/skill-git.png
-    statback: f8ada0
-    statpack: EF4F32
-    statlevel: 75
+  CSS3:
+    image: /gallery/skills/skill-css.png
+    statback: 9dc7e2
+    statpack: 3C8FC4
+    statlevel: 70
   Angular:
     image: /gallery/skills/skill-angular.png
     statback: ff4d73
     statpack: DD0031
     statlevel: 70
+  VueJs:
+    image: /gallery/skills/skill-vuejs.png
+    statback: 41b786
+    statpack: 34495e
+    statlevel: 65
+  WebPack:
+    image: /gallery/skills/skill-webpack.png
+    statback: 8ed6fb
+    statpack: 1c78c0
+    statlevel: 65
   
 # Search
 search:
