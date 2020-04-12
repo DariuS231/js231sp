@@ -4,18 +4,21 @@ date: 2018-06-27 15:00:24
 comments: false
 ---
 ## PERSONAL STATEMENT
-I´ve been a Software Developer specialized in Microsoft technologies for over 9 years and with SharePoint for 8 years. I´ve worked with clients in almost every sector, delivering a variety of SharePoint solutions within Spain and The United Kingdom. 
+I´ve been a Software Developer specialized in Microsoft technologies since 2010 and with SharePoint and Office 365 since 2011. I´ve worked with clients in almost every sector, delivering a variety of SharePoint solutions within Spain and The United Kingdom.
 
 ## EXPERTISE
 * SharePoint Server 2007/2010/2013/2016/Online
 * Office365 and Microsoft Azure
-* Development tools and technologies: ASP .NET, MVC, Microsoft SQL Server 2005/2008/2013, FAST search, Nintex Workflows, Nintex Forms, CAML, LINQ, MongoDB, PowerShell, .NET 2.0/3.5/4.0/4.5, .NET Core 1/2/3, C#, Windows apps, web services, XML, XSLT, Visual Studio Online, Team Foundation Server, Typescript, JavaScript, jQuery, knockout.js, Angular.JS, React.js, UI-Fabric, Node.js, PnP Provisioning, SharePoint Framework.
+* Azure DevOps
+* Development tools and technologies: ASP .NET, MVC, Microsoft SQL Server 2005/2008/2013, Logic Apps, Power Automate, FAST search, Nintex Workflows, Nintex Forms, CAML, LINQ, MongoDB, PowerShell, .NET 2.0/3.5/4.0/4.5, .NET Core 1/2/3, C#, Windows apps, web services, XML, XSLT, Visual Studio Online, Team Foundation Server, Typescript, JavaScript, jQuery, knockout.js, Angular.JS, React.js, Vuejs, UI-Fabric, Node.js, PnP Provisioning, SharePoint Framework.
+* Git, TFS
 * Agile/Scrum methodologies
 
 ## WORK EXPERIENCE
 
-### Lead Developer (August 2018 – Present) - [Orbus Software](https://www.orbussoftware.com) - London, UK
+### Developer Architect (March 2020 – Present) - [Content and Code Ltd](https://www.contentandcode.com) - London, UK
 
+### Lead Developer/Product Owner (August 2018 – March 2020) - [Orbus Software](https://www.orbussoftware.com) - London, UK
 
 ### SharePoint Developer (May 2015 – July 2018) - [Content and Code Ltd](https://www.contentandcode.com) - London, UK
 
