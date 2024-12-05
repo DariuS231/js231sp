@@ -3,10 +3,10 @@ type your custom JavaScript here
 
 */
 
-var JS231SP = JS231SP || {};
-JS231SP.CORE = JS231SP.CORE || {};
+var DARIUS231 = DARIUS231 || {};
+DARIUS231.CORE = DARIUS231.CORE || {};
 
-JS231SP.CORE.Utils = (function ($) {
+DARIUS231.CORE.Utils = (function ($) {
     "use strict";
 
     var popitup = function (url, height, width) {
@@ -21,7 +21,7 @@ JS231SP.CORE.Utils = (function ($) {
 
 })($);
 
-JS231SP.CORE.MySkills = function ($) {
+DARIUS231.CORE.MySkills = function ($) {
     "use strict";
 
     var _path = document.querySelector('.stats-container .stat-path');
@@ -56,7 +56,7 @@ JS231SP.CORE.MySkills = function ($) {
     setStatPosition('.stats-container .stat-path', _dashLength);
 };
 
-JS231SP.CORE.ReadingProgress = (function ($) {
+DARIUS231.CORE.ReadingProgress = (function ($) {
     "use strict";
     var progressBar, max;
 
@@ -89,7 +89,7 @@ JS231SP.CORE.ReadingProgress = (function ($) {
 })($);
 
 
-JS231SP.CORE.Init = (function ($) {
+DARIUS231.CORE.Init = (function ($) {
     "use strict";
     $('[data-toggle="tooltip"]').tooltip();
 })($);

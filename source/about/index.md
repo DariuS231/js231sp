@@ -10,7 +10,7 @@ photos:
 
 My full name is **Dario Alejandro Alvarez Borrero**,  I was born in [Maracay - Venezuela](https://en.wikipedia.org/wiki/Maracay), lived and studied in [Madrid - Spain](https://en.wikipedia.org/wiki/Madrid) and I am currently living and working in [London - UK](https://en.wikipedia.org/wiki/London). 
 
-I'm a software engineer focused on Microsoft Technologies, specifically SharePoint, Office 365 and Azure. Currently working at [Content and Code Ltd](https://www.contentandcode.com) as an Developer Architect.
+I'm a software engineer focused on Microsoft Technologies, specifically SharePoint, Office 365 and Azure. Currently working at [Advania UK](https://www.advania.co.uk/) as a Head of Product Development for the [Fresh Intranet](https://freshintranet.com/) team.
 
 I´ve been working with Microsoft technologies since 2010 and with SharePoint since 2011. I´ve worked with clients in almost every sector, delivering a variety of solutions within Spain and The United Kingdom.
 

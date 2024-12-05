@@ -20,4 +20,4 @@ tags:
       }catch (e) {
         console.log(e); 
       }
-})('JS231SPList');
+})('DARIUS231List');

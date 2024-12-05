@@ -116,13 +116,13 @@ The values should be provided after the name of the gulp task(`serve`, `build`) 
 ``` shell
 #build
 gulp build --appId "0ae21bb6-5a8f-44ca-95fe-4dd2c05be1c8" 
-            --welcomeText "Welcome to JS 231 SP!!!"
-            --resourceURL "https://js231sp.com/"
+            --welcomeText "Welcome to DARIUS 231!!!"
+            --resourceURL "https://darius231.com/"
             --ship
 # Serve
 gulp serve --appId "0ae21bb6-5a8f-44ca-95fe-4dd2c05be1c8"
-            --welcomeText "Welcome to JS 231 SP!!!"
-            --resourceURL "https://js231sp.com/"
+            --welcomeText "Welcome to DARIUS 231!!!"
+            --resourceURL "https://darius231.com/"
 ```
    
 ### Without Passing Parameters on Command line
